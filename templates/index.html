@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salvar Nome</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Minha lista de tarefas!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 </head>
 <body>
+
     <div class="container">
-        <h1>Informe o seu nome</h1>
-        <form action="/salvar_nome" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-            <button type="submit">Salvar</button>
+        <h1>Minhas Tarefas</h1>
+
+        {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+        {% endif %}
+
+        <form action="/" method="post" class="add-task-form">
+            <input type="text" name="task" placeholder="Digite uma nova tarefa..">
+            <button type="submit">Adicionar Tarefa</button>
         </form>
+
+        <ul class="task-list">
+            {%if tasks %}
+                {% for task in tasks %}
+                <li>
+                    {{task}}
+                    </li>
+                {%endfor%}
+            {%else%}
+                <li>Nenhuma tarefa adiciona ainda.</li>
+            {%endif%}
+        </ul>
     </div>
+    
 </body>
 </html>
