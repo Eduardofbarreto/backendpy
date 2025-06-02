@@ -9,3 +9,89 @@ body{
     align-items: flex-start;
 
 }
+
+.container{
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+h1{
+    text-align: center;
+    color: #2196f3;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.add-task-form {
+    display: flex;
+    gap: 10px; /* Espaço entre input e botão */
+    margin-bottom: 30px;
+}
+
+.add-task-form input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #b3e5fc; /* Borda azul clara */
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none; /* Remove a borda de foco padrão */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-task-form input[type="text"]:focus {
+    border-color: #2196f3; /* Borda azul ao focar */
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2); /* Sombra de foco */
+}
+
+.add-task-form button {
+    padding: 12px 25px;
+    background-color: #2196f3; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-task-form button:hover {
+    background-color: #1976d2; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+.add-task-form button:active {
+    transform: translateY(0); /* Efeito de clique */
+}
+
+/* Lista de tarefas */
+.task-list {
+    list-style: none; /* Remove marcadores de lista padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background-color: #f0f8ff; /* Fundo azul muito claro para cada item */
+    border: 1px solid #e0f2f7;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: #424242;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.task-list li:last-child {
+    margin-bottom: 0; /* Remove a margem do último item */
+}
+
+.task-list li:hover {
+    background-color: #e3f2fd; /* Fundo ligeiramente mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
