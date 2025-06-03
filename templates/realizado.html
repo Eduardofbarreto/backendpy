@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa Cadastrada!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sucesso!</h1>
+        <p>A tarefa "<strong>{{task}}</strong>" foi cadastrada com sucesso!</p>
+        <p>O que você gostaria de fazer agora?</p>
+        <ul>
+            <li><a href="/">Voltar para a lista de tarefas!</a></li>
+            <li><a href="/">Adicionar outra tarefa!</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
